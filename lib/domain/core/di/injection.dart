@@ -31,7 +31,7 @@ Future<void> configureDependency({required String env}) async {
   // [init] generated method
   await init(
     sl,
-    environment: Environment.prod,
+    environment: env,
   );
 }
 

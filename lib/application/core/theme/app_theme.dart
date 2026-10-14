@@ -38,7 +38,7 @@ class AppTheme {
           ),
         ),
       );
-  static ThemeData get _premiumTheme => ThemeData(
+  static ThemeData get premiumTheme => ThemeData(
         scaffoldBackgroundColor: const Color(0xFF211D1D),
         textTheme: const TextTheme(
           bodyMedium: baseTestStyle,

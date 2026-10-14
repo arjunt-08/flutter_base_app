@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_application_1/application/core/utils/alert_dialog.dart';
-import 'package:flutter_application_1/application/core/utils/logger.dart';
 import 'package:flutter_dropdown_alert/model/data_alert.dart';
 
 import 'package:url_launcher/url_launcher.dart';

@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_application_1/application/core/utils/logger.dart';
 import 'package:flutter_application_1/domain/core/di/local_notification_serveice.dart';
 import 'package:injectable/injectable.dart';
 import 'package:permission_handler/permission_handler.dart';

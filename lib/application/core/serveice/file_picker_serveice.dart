@@ -1,4 +1,3 @@
-import 'package:flutter_application_1/application/core/app_details.dart';
 import 'package:flutter_application_1/application/core/utils/alert_dialog.dart';
 import 'package:flutter_application_1/application/core/utils/enums.dart';
 import 'package:flutter_dropdown_alert/model/data_alert.dart';

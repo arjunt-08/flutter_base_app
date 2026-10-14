@@ -8,7 +8,6 @@ class AppRoute {
     Logger.logWarning(
       'Route Name: ${settings.name},  Arguments: ${settings.arguments}, ArgumentType: ${settings.arguments.runtimeType}',
     );
-    final arguments = (settings.arguments as Map<String, dynamic>?);
 
     switch (settings.name) {
       case AppRoot.routeName:
@@ -22,7 +21,7 @@ class AppRoute {
       settings: settings,
       child: screen,
       curve: Curves.easeIn,
-      duration: const Duration(milliseconds: 400),
+      duration: const Duration(milliseconds: 300),
       type: PageTransitionType.rightToLeft,
     );
   }

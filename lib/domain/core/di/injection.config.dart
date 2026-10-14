@@ -1,3 +1,4 @@
+// dart format width=80
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 // **************************************************************************
@@ -13,7 +14,10 @@ import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 import 'package:shared_preferences/shared_preferences.dart' as _i460;
 
+import '../../../application/core/bloc/app_bloc_observer.dart' as _i437;
 import '../../../application/core/serveice/dio_client.dart' as _i90;
+import '../../../application/core/serveice/local_db_serveice.dart' as _i178;
+import '../../../application/core/theme/theme/theme_cubit.dart' as _i756;
 import '../base/run_safely.dart' as _i530;
 import 'app_injection_module.dart' as _i975;
 import 'local_notification_serveice.dart' as _i793;
@@ -42,9 +46,16 @@ Future<_i174.GetIt> init(
     () => appInjectionModule.initLocalNotification(),
     preResolve: true,
   );
-  gh.lazySingleton<_i530.RunSafely>(() => _i530.RunSafely());
   gh.lazySingleton<_i361.Dio>(() => appInjectionModule.dio);
-  gh.lazySingleton<_i90.DioClient>(() => _i90.DioClient(gh<_i361.Dio>()));
+  gh.lazySingleton<_i530.RunSafely>(() => _i530.RunSafely());
+  gh.lazySingleton<_i437.AppBlocObserver>(() => _i437.AppBlocObserver());
+  gh.lazySingleton<_i756.ThemeCubit>(() => _i756.ThemeCubit());
+  gh.lazySingleton<_i178.LocalDbService>(
+      () => _i178.LocalDbService(gh<_i460.SharedPreferences>()));
+  gh.lazySingleton<_i90.DioClient>(() => _i90.DioClient(
+        gh<_i361.Dio>(),
+        gh<_i178.LocalDbService>(),
+      ));
   return getIt;
 }
 

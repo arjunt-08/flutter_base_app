@@ -10,7 +10,7 @@ const baseHeadingStyle = TextStyle(fontFamily: 'Jost');
 
 final _scaleWidth = AppDetails.screenSize.width / AppDetails.designWidth;
 
-const _premiumTextGradient = LinearGradient(colors: [
+const premiumTextGradient = LinearGradient(colors: [
   Color(0xFFFFFFCC),
   Color(0xFFFFF4B4),
   Color(0XFFFFD159),
